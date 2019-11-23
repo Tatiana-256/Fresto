@@ -1,0 +1,35 @@
+header {
+  background-image: url(../images/purple_flower_wall_list.jpg);
+  background-image: linear-gradient(
+      rgba(78, 22, 184, 0.623),
+      rgba(100, 0, 100, 0.115)
+    ),
+    url(../images/purple_flower_wall_list.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.btn {
+  display: inline-block;
+  width: 250px;
+  line-height: 70px;
+  text-decoration: none;
+  color: rgb(255, 248, 248);
+  border: 3px solid #9a50df0c;
+  text-transform: uppercase;
+  margin-left: 20px;
+  text-align: center;
+  background: rgba(208, 187, 231, 0.568);
+  border-radius: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.hero_text_box {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  color: #ffffff;
+  font-size: 28px;
+}

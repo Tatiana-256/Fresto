@@ -1,0 +1,13 @@
+.nav {
+  float: right;
+  margin-top: 50px;
+}
+
+.nav li {
+  display: inline;
+  margin-right: 40px;
+}
+
+.nav li a {
+  text-decoration: none;
+}
