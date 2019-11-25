@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Navigation.module.css";
+import { NavLink } from "react-router-dom";
 
 class Navigation extends React.Component {
   render(props) {
@@ -7,16 +8,16 @@ class Navigation extends React.Component {
       <div>
         <ul className={classes.nav}>
           <li>
-            <a href="#">Food delivery</a>
+            <NavLink to="/Home">Home</NavLink>
           </li>
           <li>
-            <a href="#">How it works</a>
+            <NavLink to="/How-it-works">How it works</NavLink>
           </li>
           <li>
-            <a href="#">Our cities</a>
+            <NavLink to="/Our-cities">Contacts</NavLink>
           </li>
           <li>
-            <a href="#">Sign up</a>
+            <NavLink to="/SignIn">Sign in</NavLink>
           </li>
         </ul>
       </div>

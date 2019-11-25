@@ -1,14 +1,28 @@
 .nav {
   float: right;
-  margin-top: 50px;
+  margin: 50px 50px;
 }
 
 .nav li {
   display: inline;
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
-.nav li a {
+.nav li a:link,
+.nav li a:visited {
+  letter-spacing: 1px;
+  padding: 8px 0px;
+  color: #ffffff;
   text-decoration: none;
-  color: aliceblue;
+  font-size: 140%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+.nav li a:hover,
+.nav li a:active {
+  color: rgb(237, 248, 134);
+  border-bottom: 1px solid rgb(237, 248, 134);
 }

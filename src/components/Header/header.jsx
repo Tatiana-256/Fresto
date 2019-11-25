@@ -1,6 +1,8 @@
 import React from "react";
-import classes from "./header.module.css";
+// import classes from "./header.module.css";
 import Navigation from "./Navigation/Navigation";
+import Home from "./Home/Home";
+// import SignIn from "./SignIn/SignIn";
 
 class Header extends React.Component {
   render(props) {
@@ -10,7 +12,10 @@ class Header extends React.Component {
           <div>
             <Navigation />
           </div>
-          <div className={classes.hero_text_box}>
+          <div>
+            <Home />
+          </div>
+          {/* <div className={classes.hero_text_box}>
             <h1>
               Try to do it
               <br />
@@ -22,7 +27,7 @@ class Header extends React.Component {
             <a className={classes.btn} href="#">
               random text
             </a>
-          </div>
+          </div> */}
         </header>
       </div>
     );

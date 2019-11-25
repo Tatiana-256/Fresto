@@ -1,13 +1,22 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header/header";
+import { BrowserRouter, Route } from "react-router-dom";
+import SignIn from "./components/Header/SignIn/SignIn";
+import Navigation from "./components/Header/Navigation/Navigation";
+import Home from "./components/Header/Home/Home";
 
-function App() {
+const App = props => {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navigation />
+        <div>
+          <Route path="/Home" render={() => <Home />} />
+          <Route path="/SignIn" render={() => <SignIn />} />
+        </div>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

@@ -1,6 +1,16 @@
 .App {
   margin: 0px;
   padding: 0px;
+  background-image: url(./components/images/purple_flower_wall_list.jpg);
+  background-image: linear-gradient(
+      rgba(78, 22, 184, 0.623),
+      rgba(100, 0, 100, 0.115)
+    ),
+    url(./components/images/purple_flower_wall_list.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
   /* text-align: center; */
   /* background-color: #485164; */
   /* min-height: 100vh;
