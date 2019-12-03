@@ -39,6 +39,7 @@
   border-radius: 20px;
   margin: auto;
   background-color: #efdfff;
+  margin-top: 5px;
 }
 
 div .input {
@@ -49,4 +50,8 @@ div .input {
   left: 50%;
   font-family: Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
+}
+
+.inputForm:invalid {
+  box-shadow: 0 0 2px 1px rgba(255, 0, 0, 0.74);
 }
