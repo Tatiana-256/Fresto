@@ -8,8 +8,19 @@ class SignIn extends React.Component {
         <div className={classes.input}>Sign in</div>
         <div className={classes.form}>
           <div>
-            <input className={classes.inputForm} />
-            <input className={classes.inputForm} />
+            <input
+              className={classes.inputForm}
+              type="email"
+              required
+              placeholder="User name"
+            />
+            <input
+              className={classes.inputForm}
+              type="password"
+              placeholder="User password"
+              required
+              minlength="6"
+            />
           </div>
           <div>
             <button className={classes.btn}>Sign in</button>
