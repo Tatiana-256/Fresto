@@ -2,7 +2,31 @@ import React from "react";
 import classes from "./SignIn.module.css";
 
 class SignIn extends React.Component {
-  render(props) {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: ""
+    };
+  }
+
+  handleSubmit = async event => {
+    event.preventDefault();
+
+    // try {
+    //   await auth.singInWithEmail(email, password);
+    //   this.setState({ email: "", password: "" });
+    // } catch (error) {
+    //   console.log(error);
+    // }
+  };
+
+  handelChange = event => {
+    const { value, name } = event.target;
+    this.setState({ [name]: value });
+  };
+
+  render() {
     return (
       <div>
         <div className={classes.input}>Sign in</div>
@@ -11,15 +35,21 @@ class SignIn extends React.Component {
             <input
               className={classes.inputForm}
               type="email"
+              name="email"
               required
               placeholder="User name"
+              onChange={this.handelChange}
+              value={this.state.email}
             />
             <input
               className={classes.inputForm}
               type="password"
+              name="password"
               placeholder="User password"
+              onChange={this.handelChange}
+              value={this.state.password}
               required
-              minlength="6"
+              minLength="6"
             />
           </div>
           <div>
@@ -30,5 +60,7 @@ class SignIn extends React.Component {
     );
   }
 }
+
+// }
 
 export default SignIn;
