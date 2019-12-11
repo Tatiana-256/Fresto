@@ -1,6 +1,10 @@
 import React from "react";
 import classes from "./Navigation.module.css";
 import { NavLink } from "react-router-dom";
+import { selectCurrentUser } from "../../../redux/user/user.selectors";
+import { auth } from "../../../firebase/firebase.utils";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 class Navigation extends React.Component {
   render(props) {
@@ -17,7 +21,21 @@ class Navigation extends React.Component {
             <NavLink to="/Our-cities">Contacts</NavLink>
           </li>
           <li>
-            <NavLink to="/SignIn">Sign in</NavLink>
+          {this.props.currentUser ? (
+            <div
+              className={classes.option}
+              onClick={() => {
+                auth.signOut();
+              }}
+            >
+              SIGN OUT
+            </div>
+          ) : (
+            <NavLink  to="/SignIn">
+              SIGN IN
+            </NavLink>
+          )}
+          
           </li>
         </ul>
       </div>
@@ -25,4 +43,8 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation;
+const mapStateToProps = createStructuredSelector ({
+  currentUser: selectCurrentUser
+});
+
+export default connect(mapStateToProps)(Navigation);
