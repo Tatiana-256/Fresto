@@ -26,3 +26,30 @@
   color: rgb(237, 248, 134);
   border-bottom: 1px solid rgb(237, 248, 134);
 }
+
+
+.option:hover,
+ .option:active {
+  color: rgb(237, 248, 134);
+  border-bottom: 1px solid rgb(237, 248, 134);
+  cursor: pointer;
+}
+
+.option{
+  display: inline;
+  margin-right: 50px;
+  color: #ffffff;
+}
+
+.option :link,
+ .option :visited {
+  letter-spacing: 1px;
+  padding: 8px 0px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 140%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
